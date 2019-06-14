@@ -1,0 +1,18 @@
+[Unit]
+Description=WSO2 APIM
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=wso2carbon
+Group=wso2
+Environment=JAVA_HOME=/opt/jdk
+Environment=CARBON_HOME=/opt/wso2am-2.6.0
+PIDFile=/opt/wso2am-2.6.0/wso2carbon.pid
+ExecStart=/opt/wso2am-2.6.0/bin/wso2server.sh start
+ExecStop=/opt/wso2am-2.6.0/bin/wso2server.sh stop
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
