@@ -4,7 +4,7 @@ Wants=network-online.target
 After=network-online.target
 
 [Service]
-Type=forking
+Type=oneshot
 User=wso2carbon
 Group=wso2
 Environment=JAVA_HOME=/opt/jdk
