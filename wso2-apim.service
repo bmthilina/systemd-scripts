@@ -6,7 +6,7 @@ After=network-online.target
 [Service]
 Type=oneshot
 User=wso2carbon
-Group=wso2
+Group=wso2carbon
 Environment="JAVA_HOME=/opt/jdk"
 PIDFile=/opt/wso2am-2.6.0/wso2carbon.pid
 ExecStart=/opt/wso2am-2.6.0/bin/wso2server.sh start
