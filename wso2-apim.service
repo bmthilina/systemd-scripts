@@ -7,8 +7,7 @@ After=network-online.target
 Type=oneshot
 User=wso2carbon
 Group=wso2
-Environment=JAVA_HOME=/opt/jdk
-CARBON_HOME=/opt/wso2am-2.6.0
+Environment="JAVA_HOME=/opt/jdk"
 PIDFile=/opt/wso2am-2.6.0/wso2carbon.pid
 ExecStart=/opt/wso2am-2.6.0/bin/wso2server.sh start
 ExecStop=/opt/wso2am-2.6.0/bin/wso2server.sh stop
